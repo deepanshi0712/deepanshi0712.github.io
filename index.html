@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meesho Clone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f6f6f6;
+}
+
+/* ================= HEADER ================= */
+.top-header{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+
+.header-row{
+  display:flex;
+  align-items:center;
+  padding:12px 24px;
+  gap:20px;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:700;
+  color:#5f0f40;
+}
+
+.search-box{
+  flex:1;
+  display:flex;
+  align-items:center;
+  border:1px solid #ccc;
+  border-radius:4px;
+  padding:10px 12px;
+  gap:10px;
+}
+
+.search-box input{
+  border:none;
+  outline:none;
+  width:100%;
+  font-size:16px;
+}
+
+.header-links{
+  display:flex;
+  gap:30px;
+  font-size:14px;
+  text-align:center;
+}
+
+/* ================= CATEGORY BAR ================= */
+.category-bar{
+  background:#fff;
+  border-top:1px solid #eee;
+  padding:10px 24px;
+}
+
+.category-bar ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+  font-size:15px;
+  overflow-x:auto;
+}
+
+/* ================= HERO ================= */
+.hero{
+  background:#9b1457;
+  padding:30px 0;
+}
+
+.hero img{
+  width:100%;
+  max-width:1200px;
+  display:block;
+  margin:auto;
+  border-radius:10px;
+}
+
+/* ================= PRODUCTS ================= */
+.products{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+}
+
+.product-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.product-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:15px;
+}
+
+.product-info h4{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.price{
+  font-size:18px;
+  color:#e91e63;
+  font-weight:bold;
+}
+
+.delivery{
+  color:green;
+  font-size:14px;
+  margin-top:5px;
+}
+
+/* ================= FEATURES ================= */
+.features{
+  background:#fff;
+  margin:20px auto;
+  max-width:1200px;
+  border-radius:10px;
+  display:flex;
+  justify-content:space-around;
+  padding:20px;
+  font-size:14px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#fff;
+  padding:40px 20px;
+  margin-top:40px;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+}
+
+.footer-logo{
+  font-size:30px;
+  font-weight:bold;
+  color:#5f0f40;
+}
+
+.footer-section h4{
+  margin-bottom:15px;
+}
+
+.footer-section ul{
+  list-style:none;
+}
+
+.footer-section ul li{
+  margin-bottom:10px;
+  font-size:14px;
+  color:#555;
+}
+
+.app-buttons img{
+  width:140px;
+  margin-top:10px;
+  display:block;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .header-links{
+    display:none;
+  }
+  .features{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top-header">
+  <div class="header-row">
+    <div class="logo">meesho</div>
+
+    <div class="search-box">
+      🔍
+      <input type="text" placeholder="Try Saree, Kurti or Search by Product Code">
+    </div>
+
+    <div class="header-links">
+      <div>Become<br>Supplier</div>
+      <div>Investor<br>Relations</div>
+      <div>👤<br>Profile</div>
+      <div>🛒<br>Cart</div>
+    </div>
+  </div>
+
+  <nav class="category-bar">
+    <ul>
+      <li>Popular</li>
+      <li>Kurti, Saree & Lehengas</li>
+      <li>Women Western</li>
+      <li>Lingerie</li>
+      <li>Men</li>
+      <li>Kids & Toys</li>
+      <li>Home & Kitchen</li>
+      <li>Beauty & Health</li>
+      <li>Jewellery & Accessories</li>
+      <li>Bags</li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <img src="Screenshot 2025-12-27 193212.png">
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+<div class="features">
+  <div>🔄 7 Days Easy Return</div>
+  <div>💰 Cash on Delivery</div>
+  <div>🏷 Lowest Prices</div>
+</div>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+<section class="products">
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://th.bing.com/th/id/OIP.lh3-ReFYgUg5i8-0btYSzgHaJ4?w=202&h=269&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+      <div class="product-info">
+        <h4>Women Printed Kurti</h4>
+        <div class="price">₹399</div>
+        <div class="delivery">Free Delivery</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://th.bing.com/th/id/OIP.-sWy6F62syyKB1ZUg_Ue1wHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+      <div class="product-info">
+        <h4>Stylish Saree</h4>
+        <div class="price">₹599</div>
+        <div class="delivery">Free Delivery</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://th.bing.com/th/id/OIP.zZgbwM6rBbh0pU-YQgbIGwHaLw?w=202&h=313&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+      <div class="product-info">
+        <h4>Men Casual Shirt</h4>
+        <div class="price">₹499</div>
+        <div class="delivery">Free Delivery</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="data:image/webp;base64,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">
+      <div class="product-info">
+        <h4>Women Handbag</h4>
+        <div class="price">₹349</div>
+        <div class="delivery">Free Delivery</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-container">
+
+    <div>
+      <div class="footer-logo">meesho</div>
+      <p style="margin-top:10px;font-size:14px;color:#555;">
+        Affordable Online Shopping Platform
+      </p>
+      <div class="app-buttons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Shop Non-Stop</h4>
+      <ul>
+        <li>Careers</li>
+        <li>Become a Supplier</li>
+        <li>Hall of Fame</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal & Policies</h4>
+      <ul>
+        <li>Return Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <ul>
+        <li>support@meesho.com</li>
+        <li>© 2025 Meesho Clone</li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
